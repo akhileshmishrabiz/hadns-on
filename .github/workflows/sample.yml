@@ -2,10 +2,10 @@ name: Workflow with manual trigger and Environment Variables
 
 on:
   workflow_dispatch: # Manual trigger
-# env:
-#   WORKFLOW_ENV_VARIABLE: "Workflow Level"
 env:
-  MY_NAME: "akhilesh-mishra"
+  WORKFLOW_ENV_VARIABLE: "Workflow Level"
+# env:
+#   MY_NAME: "akhilesh-mishra"
 
 jobs:
   example_job:
@@ -24,6 +24,13 @@ jobs:
         echo "Step Level Environment Variable: ${{ env.STEP_ENV_VARIABLE }}"
       env:
         STEP_ENV_VARIABLE: "Step Level"
+
+    - name: Print Environment in new step
+      run: |
+        echo "Workflow Level Environment Variable: $WORKFLOW_ENV_VARIABLE"
+        echo "Job Level Environment Variable: $JOB_ENV_VARIABLE"
+        echo "Step Level Environment Variable: ${{ env.STEP_ENV_VARIABLE }}"
+   
   # new_job:
   #   runs-on: ubuntu-latest
   #   steps:
