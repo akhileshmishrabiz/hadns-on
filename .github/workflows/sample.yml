@@ -24,11 +24,11 @@ jobs:
         echo "Step Level Environment Variable: ${{ env.STEP_ENV_VARIABLE }}"
       env:
         STEP_ENV_VARIABLE: "Step Level"
-  new_job:
-    runs-on: ubuntu-latest
-    steps:
+  # new_job:
+  #   runs-on: ubuntu-latest
+  #   steps:
 
-      - name: run a commands
-        run: |
-          echo ${{ emv.JOB_ENV_VARIABLE  }}
-          echo ${{ emv.MY_NAME  }}
+  #     - name: run a commands
+  #       run: |
+  #         echo ${{ emv.JOB_ENV_VARIABLE  }}
+  #         echo ${{ emv.MY_NAME  }}
