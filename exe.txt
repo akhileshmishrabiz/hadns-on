@@ -1,1 +1,9 @@
 This is a new file 
+
+
+
+modify/add some files -> need to satge the change -> commit
+
+git status -> git add <filr name with path> or git add .
+
+Lets do some github actions here.
