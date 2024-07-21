@@ -36,4 +36,5 @@ jobs:
        echo "Hello job2:, ${{ env.WORKFLOW_ENV_VARIABLE }}"
        echo "Hello job2:, ${{ env.JOB_ENV_VARIABLE }}"
        echo "Hello job2:, ${{ env.STEP_LEVEL_ENV }}"
+       exit 1
 
