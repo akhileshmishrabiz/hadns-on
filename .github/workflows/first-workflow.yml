@@ -32,9 +32,6 @@ jobs:
 
   job-multiple-command:                                # build job
     runs-on: ubuntu-latest              # runner
-    env:
-     JOB_ENV_VARIABLE: "job Level env"
-
     steps:                              # git checkout step
     - name: Checkout Repository
       uses: actions/checkout@v2
