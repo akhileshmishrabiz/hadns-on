@@ -12,6 +12,7 @@ env:
       AWS_ACCOUNT: "366140438193"
       GIT_SHA: ${{ github.sha }}
       AWS_EC2: "gh-deploy"
+      AWS_REGION: "ap-south-1"
 
 jobs:
   docker-build:
@@ -28,7 +29,6 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION  }} 
 
       - name: Login to Amazon ECR
         run: |
