@@ -3,6 +3,8 @@ name: doker build
 
 on:
   push:
+   branches:
+    - main
   workflow_dispatch:
 
 env:
@@ -12,6 +14,7 @@ env:
       AWS_REGION: ap-south-1  # Specifies the AWS region
       REPO_NAME: flask
       AWS_ACCOUNT: "366140438193"
+      GIT_SHA: ${{ github.sha }}
 
 jobs:
   docker-build:
